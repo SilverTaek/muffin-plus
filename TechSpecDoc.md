@@ -39,7 +39,8 @@
     - zcode?: (시도코드): "11"
     - zscode?: (지역구분 코드): "116600"
     - name?: (충전소명): "1"
-    - status?: (상태): "0"
+    - status?: (상태): 0
+    - chger_type?: (충전타입):2
     - limit?: (제한 갯수): default 20
     - next_id?: (다음 아이템 ID)
     
@@ -53,6 +54,7 @@
              "id":2,
              "name":"머핀1호점",
              "status":1,
+             "chger_type":2,
              "zcode":11,
              "zscode":116000
           },
@@ -60,6 +62,7 @@
              "id":2,
              "name":"머핀플러스점",
              "status":0,
+             "chger_type":2,
              "zcode":22,
              "zscode":225000
           }
@@ -90,6 +93,7 @@
           "id":2,
           "name":"머핀플러스점",
           "status":0,
+          "chger_type":2,
           "zcode":22,
           "zscode":225000
     }
@@ -177,6 +181,6 @@
 
 ## 마일스톤 ( Milestones )
 
-- 기능 구현: 2023-03-23 - 20236-03-27
+- 기능 구현: 2023-03-23 - 
 
 ## 질문 ( Open Questions )
