@@ -1,9 +1,7 @@
 package com.muffin.plus.muffinplus.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -11,25 +9,31 @@ import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor
+@Table(name = "reservation")
 @Entity
 public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
+    private int userId;
 
-    private int status;
+    private int chargingStationId;
 
-    private int chgerType;
+    private LocalDateTime dateStarted;
 
-    private int zcode;
-
-    private int zscode;
-
+    private LocalDateTime dateEnded;
     private LocalDateTime dateCreated;
-
     private LocalDateTime dateUpdated;
-
     private LocalDateTime dateDeleted;
+
+    @Builder
+    public Reservation(int userId, int chargingStationId, LocalDateTime dateStarted, LocalDateTime dateEnded, LocalDateTime dateCreated, LocalDateTime dateUpdated) {
+        this.userId = userId;
+        this.chargingStationId = chargingStationId;
+        this.dateStarted = dateStarted;
+        this.dateEnded = dateEnded;
+        this.dateCreated = LocalDateTime.now();
+        this.dateUpdated = LocalDateTime.now();
+    }
 }

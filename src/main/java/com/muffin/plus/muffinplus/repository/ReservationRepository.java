@@ -1,4 +1,7 @@
 package com.muffin.plus.muffinplus.repository;
 
-public class ReservationRepository {
+import com.muffin.plus.muffinplus.domain.Reservation;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ReservationRepository extends JpaRepository<Reservation, Long> {
 }

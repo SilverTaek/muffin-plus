@@ -101,13 +101,13 @@
     # 예약 API
     
     Method: POST 
-    Path: user/:user_id/charging-station/:charging_station_id
-    Parameter
-    - user_id(유저ID): 1
+    Path: /reservation
     
     Body
-    - start_at (예약 시작 일시)
-    - end_at (예약 종료 일시)
+    - user_id (사용자 ID)
+    - charging_station_id (충전소 ID)
+    - date_started (예약 시작 일시)
+    - date_ended (예약 종료 일시)
     
     Response
     - 200 OK
